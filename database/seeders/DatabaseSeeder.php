@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
 use App\Models\Worship;
+use App\Models\Category;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Congregation;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -35,7 +36,8 @@ class DatabaseSeeder extends Seeder
             'category' => 'Event',
         ]);
 
-        Post::factory(10)->create();
+        Congregation::factory(6)->create();
         Worship::factory(6)->create();
+        Post::factory(10)->create();
     }
 }
