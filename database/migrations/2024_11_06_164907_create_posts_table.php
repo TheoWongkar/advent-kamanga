@@ -22,7 +22,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
             $table->foreignId('category_id')->constrained('categories')->onDelete('cascade');
             $table->string('title');
-            $table->string('slug');
+            $table->string('slug')->unique();
             $table->string('image');
             $table->text('body');
             $table->timestamps();

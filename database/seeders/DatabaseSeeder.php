@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
         Category::factory()->create([
             'category' => 'Event',
         ]);
+
         Post::factory(10)->create();
         Worship::factory(6)->create();
     }
