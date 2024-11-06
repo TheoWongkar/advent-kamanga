@@ -45,4 +45,9 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function worships()
+    {
+        return $this->hasMany(Worship::class);
+    }
 }
