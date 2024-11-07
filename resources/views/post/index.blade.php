@@ -92,7 +92,7 @@
                                             <td class="py-4 px-2 sm:px-4">{{ substr($post->title, 0, 20) }}</td>
                                             <td class="py-4 px-2 sm:px-4 text-center">
                                                 <span
-                                                    class="inline-block bg-{{ $post->category->color }}-600 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full hover:bg-orange-500 transition duration-200 ease-in-out shadow-md text-xs sm:text-sm">
+                                                    class="inline-block bg-{{ $post->category->color }}-600 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full hover:bg-{{ $post->category->color }}-500 transition duration-200 ease-in-out shadow-md text-xs sm:text-sm">
                                                     {{ $post->category->category }}
                                                 </span>
                                             </td>

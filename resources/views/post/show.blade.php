@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Berita') }}
+            {{ __('Berita : ') }} <span class="text-blue-800">{{ substr($post->title, 0, 17) }}</span>
         </h2>
     </x-slot>
 

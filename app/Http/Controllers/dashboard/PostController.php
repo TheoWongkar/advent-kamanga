@@ -89,8 +89,10 @@ class PostController extends Controller
     public function edit(string $slug)
     {
         $post = Post::where('slug', $slug)->firstOrFail();
+        $categories = Category::all();
         return view('post.edit', [
-            'post' => $post
+            'post' => $post,
+            'categories' => $categories,
         ]);
     }
 
