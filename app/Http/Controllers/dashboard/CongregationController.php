@@ -74,31 +74,26 @@ class CongregationController extends Controller
     public function edit(string $id)
     {
         $congregation = Congregation::where('id', $id)->firstOrFail();
-        return view('post.edit', [
-            'congregation' => $congregation,
-        ]);
+        return view('congregation.edit', compact('congregation'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $slug)
+    public function update(Request $request, string $id)
     {
-        $post = Post::where('slug', $slug)->firstOrFail();
+        $congregation = Congregation::where('id', $id)->firstOrFail();
 
         $validated = $request->validate([
-            'title' => 'required|string|min:5|',
-            'image' => 'nullable|image|file|max:3072',
-            'body' => 'required|string',
+            'name' => 'required|string|min:5',
+            'gender' => 'required|string',
+            'age' => 'required|integer',
+            'address' => 'required|string',
         ]);
 
-        if ($request->file('image')) {
-            $validated['image'] = $request->file('image')->store('post-images');
-        }
+        $congregation->update($validated);
 
-        $post->update($validated);
-
-        return redirect()->route('berita.index')
+        return redirect()->route('jemaat.index')
             ->with('success', 'Jemaat berhasil diubah.');
     }
 

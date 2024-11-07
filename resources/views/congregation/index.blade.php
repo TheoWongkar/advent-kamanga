@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Berita') }}
+            {{ __('Jemaat') }}
         </h2>
     </x-slot>
 
@@ -55,7 +55,7 @@
                         </div>
                     @endif
 
-                    <!-- Tabel Berita -->
+                    <!-- Tabel Jemaat -->
                     <div class="overflow-x-auto">
                         @if ($congregations->count())
                             <table class="min-w-full bg-gray-100 rounded-xl shadow-md">
