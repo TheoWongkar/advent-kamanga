@@ -70,7 +70,7 @@
                                             JUDUL
                                         </th>
                                         <th
-                                            class="text-left py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
+                                            class="text-center py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
                                             KATEGORI
                                         </th>
                                         <th
@@ -90,7 +90,12 @@
                                         <tr class="border-t hover:bg-blue-100 transition duration-200">
                                             <td class="py-4 px-2 sm:px-4 text-center">{{ $loop->iteration }}</td>
                                             <td class="py-4 px-2 sm:px-4">{{ substr($post->title, 0, 20) }}</td>
-                                            <td class="py-4 px-2 sm:px-4">{{ $post->category->category }}</td>
+                                            <td class="py-4 px-2 sm:px-4 text-center">
+                                                <span
+                                                    class="inline-block bg-{{ $post->category->color }}-600 text-white px-2 py-1 sm:px-3 sm:py-1 rounded-full hover:bg-orange-500 transition duration-200 ease-in-out shadow-md text-xs sm:text-sm">
+                                                    {{ $post->category->category }}
+                                                </span>
+                                            </td>
                                             <td class="py-4 px-2 sm:px-4">{{ substr($post->user->name, 0, 20) }}</td>
                                             <td class="py-4 px-2 sm:px-4 text-center">
                                                 {{ $post->created_at->format('d M Y') }}
