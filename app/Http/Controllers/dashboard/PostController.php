@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -19,8 +20,11 @@ class PostController extends Controller
         $posts = Post::with('user')
             ->when($search, function ($query, $search) {
                 return $query->where('title', 'LIKE', "%{$search}%")
-                    ->orWhereHas('users', function ($query) use ($search) {
+                    ->orWhereHas('user', function ($query) use ($search) {
                         $query->where('name', 'LIKE', "{$search}%"); // Ganti 'name' dengan kolom yang ingin dicari dari tabel users
+                    })
+                    ->orWhereHas('category', function ($query) use ($search) {
+                        $query->where('category', 'LIKE', "{$search}%"); // Ganti 'name' dengan kolom yang ingin dicari dari tabel users
                     });
             })
             ->orderBy('created_at', 'desc')
@@ -37,7 +41,8 @@ class PostController extends Controller
      */
     public function create()
     {
-        return view('post.create');
+        $categories = Category::all();
+        return view('post.create', compact('categories'));
     }
 
     /**
@@ -46,14 +51,14 @@ class PostController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'required|string|min:5|',
+            'title' => 'required|string|min:5',
+            'category_id' => 'required|integer',
             'image' => 'required|image|file|max:3072',
             'body' => 'required|string',
         ]);
 
-        $validated['image'] = $request->file('image')->store('post-images');
+        $validated['image'] = $request->file('image')->store('post-images', 'public');
         $validated['user_id'] = Auth::id();
-
 
         Post::create($validated);
 
