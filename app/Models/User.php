@@ -54,12 +54,12 @@ class User extends Authenticatable
         return $this->hasMany(Congregation::class);
     }
 
-    public function worships()
+    public function worship()
     {
         return $this->hasMany(Worship::class);
     }
 
-    public function posts()
+    public function post()
     {
         return $this->hasMany(Post::class);
     }
