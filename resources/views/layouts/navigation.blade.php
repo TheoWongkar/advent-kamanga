@@ -15,13 +15,13 @@
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('congregations')">
+                    <x-nav-link :href="route('jemaat.index')" :active="request()->routeIs('jemaat*')">
                         {{ __('Jemaat') }}
                     </x-nav-link>
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('worships')">
                         {{ __('Ibadah') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('berita.index')" :active="request()->routeIs('posts*')">
+                    <x-nav-link :href="route('berita.index')" :active="request()->routeIs('berita*')">
                         {{ __('Berita') }}
                     </x-nav-link>
                 </div>
@@ -87,13 +87,13 @@
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
                 {{ __('Dashboard') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('congregations')">
+            <x-responsive-nav-link :href="route('jemaat.index')" :active="request()->routeIs('jemaat*')">
                 {{ __('Jemaat') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('worships')">
                 {{ __('Ibadah') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('posts')">
+            <x-responsive-nav-link :href="route('berita.index')" :active="request()->routeIs('berita*')">
                 {{ __('Berita') }}
             </x-responsive-nav-link>
         </div>

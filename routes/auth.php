@@ -9,6 +9,7 @@ use App\Http\Controllers\Auth\PasswordController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
+use App\Http\Controllers\dashboard\CongregationController;
 use App\Http\Controllers\dashboard\PostController;
 use Illuminate\Support\Facades\Route;
 
@@ -59,4 +60,5 @@ Route::middleware('auth')->group(function () {
         ->name('logout');
 
     Route::resource('dashboard/berita', PostController::class)->parameters(['posts' => 'slug']);
+    Route::resource('dashboard/jemaat', CongregationController::class);
 });
