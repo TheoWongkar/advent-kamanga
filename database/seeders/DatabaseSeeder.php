@@ -28,15 +28,15 @@ class DatabaseSeeder extends Seeder
 
         Category::factory()->create([
             'category' => 'Ibadah',
-            'color' => '#f97316',
+            'color' => 'green',
         ]);
         Category::factory()->create([
             'category' => 'Pelayanan',
-            'color' => '##22c55e',
+            'color' => 'blue',
         ]);
         Category::factory()->create([
             'category' => 'Event',
-            'color' => '#3b82f6',
+            'color' => 'red',
         ]);
 
         Congregation::factory(6)->create();
