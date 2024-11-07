@@ -18,7 +18,7 @@
                     <x-nav-link :href="route('jemaat.index')" :active="request()->routeIs('jemaat*')">
                         {{ __('Jemaat') }}
                     </x-nav-link>
-                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('worships')">
+                    <x-nav-link :href="route('ibadah.index')" :active="request()->routeIs('ibadah*')">
                         {{ __('Ibadah') }}
                     </x-nav-link>
                     <x-nav-link :href="route('berita.index')" :active="request()->routeIs('berita*')">
@@ -90,7 +90,7 @@
             <x-responsive-nav-link :href="route('jemaat.index')" :active="request()->routeIs('jemaat*')">
                 {{ __('Jemaat') }}
             </x-responsive-nav-link>
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('worships')">
+            <x-responsive-nav-link :href="route('ibadah.index')" :active="request()->routeIs('ibadah*')">
                 {{ __('Ibadah') }}
             </x-responsive-nav-link>
             <x-responsive-nav-link :href="route('berita.index')" :active="request()->routeIs('berita*')">

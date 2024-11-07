@@ -16,6 +16,7 @@ class Worship extends Model
         'preacher',
         'singer',
         'place',
+        'date',
     ];
 
     public function user()

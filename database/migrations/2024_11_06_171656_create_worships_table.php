@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('preacher');
             $table->string('singer');
             $table->string('place');
+            $table->date('date');
             $table->timestamps();
         });
     }

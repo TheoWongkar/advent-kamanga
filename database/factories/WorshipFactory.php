@@ -22,6 +22,7 @@ class WorshipFactory extends Factory
             'preacher' => fake()->name(),
             'singer' => fake()->name(),
             'place' => fake()->address(),
+            'date' => fake()->date(),
         ];
     }
 }

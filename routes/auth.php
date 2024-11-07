@@ -11,6 +11,7 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use App\Http\Controllers\dashboard\CongregationController;
 use App\Http\Controllers\dashboard\PostController;
+use App\Http\Controllers\dashboard\WorshipController;
 use Illuminate\Support\Facades\Route;
 
 Route::middleware('guest')->group(function () {
@@ -61,4 +62,5 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('dashboard/berita', PostController::class)->parameters(['posts' => 'slug']);
     Route::resource('dashboard/jemaat', CongregationController::class);
+    Route::resource('dashboard/ibadah', WorshipController::class);
 });
