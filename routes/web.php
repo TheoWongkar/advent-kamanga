@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CongregationController;
 use App\Http\Controllers\dashboard\DashboardController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
@@ -10,6 +11,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [HomeController::class, 'index']);
 Route::get('/berita', [PostController::class, 'index']);
 Route::get('/ibadah', [WorshipController::class, 'index']);
+Route::get('/jemaat', [CongregationController::class, 'index']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 
