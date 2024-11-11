@@ -9,7 +9,9 @@ class PostController extends Controller
 {
     public function index()
     {
-        $posts = Post::with('user', 'category')->get();
+        $posts = Post::with('user', 'category')
+            ->orderBy('created_at', 'DESC')
+            ->paginate(15);
 
         return view('posts', compact('posts'));
     }

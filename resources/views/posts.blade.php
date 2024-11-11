@@ -34,4 +34,10 @@
             </div>
         </div>
     @endif
+
+    <!-- Pagination -->
+    <div class="container mx-auto py-2 px-4">
+        {{ $posts->links() }}
+    </div>
+
 </x-guest-layout>
