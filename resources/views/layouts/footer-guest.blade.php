@@ -1,22 +1,32 @@
-<footer class="bg-[#375E97] text-white py-6">
-    <div class="container mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 px-4">
-        <div>
-            <h5 class="font-bold text-lg">GMAHK KAMANGA</h5>
-            <p class="text-sm sm:text-base">Gereja global yang menguduskan hari ketujuh sebagai hari Sabat.</p>
+<!-- Footer Section -->
+<footer class="bg-[#375E97] text-white py-8">
+    <div class="container mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Logo dan Deskripsi -->
+        <div class="flex flex-col items-center md:items-start text-center md:text-left">
+            <x-application-logo class="w-24 h-24 mb-4 fill-current" />
+            <p class="text-sm md:text-base">
+                Gereja global yang menguduskan hari ketujuh sebagai hari Sabat.
+            </p>
         </div>
-        <div>
-            <h5 class="font-bold text-lg">Link Navigasi</h5>
-            <ul class="space-y-2">
-                <li><a href="#" class="hover:underline text-sm sm:text-base">Tentang Kami</a></li>
-                <li><a href="#" class="hover:underline text-sm sm:text-base">Layanan</a></li>
-                <li><a href="#" class="hover:underline text-sm sm:text-base">Media</a></li>
-                <li><a href="#" class="hover:underline text-sm sm:text-base">Jemaat</a></li>
+
+        <!-- Tautan Penting -->
+        <div class="flex flex-col items-center md:items-start">
+            <h3 class="font-semibold text-xl mb-2">Tautan Penting</h3>
+            <ul class="space-y-2 text-center md:text-left">
+                <li><a href="#" class="hover:underline">Beranda</a></li>
+                <li><a href="#" class="hover:underline">Tentang Kami</a></li>
+                <li><a href="#" class="hover:underline">Ibadah</a></li>
+                <li><a href="#" class="hover:underline">Berita</a></li>
+                <li><a href="#" class="hover:underline">Jemaat</a></li>
             </ul>
         </div>
-        <div>
-            <h5 class="font-bold text-lg">Kontak</h5>
-            <p class="text-sm sm:text-base">Whatsapp: 0821 0000 0000</p>
-            <p class="text-sm sm:text-base">Email: gmahkkamanga@gmail.com</p>
+
+        <!-- Kontak -->
+        <div class="flex flex-col items-center md:items-start">
+            <h3 class="font-semibold text-xl mb-2">Kontak Kami</h3>
+            <p class="text-sm md:text-base">Whatsapp: <span class="text-gray-300">Jl. 17 Agustus Provinsi Sulawesi
+                    Utara</span></p>
+            <p class="text-sm md:text-base">Email: <span class="text-gray-300">+62 431-843333</span></p>
         </div>
     </div>
 </footer>

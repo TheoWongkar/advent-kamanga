@@ -12,16 +12,16 @@
             </div>
             <!-- Desktop Menu -->
             <nav class="hidden lg:flex space-x-3">
-                <a href="#" class="hover:underline">Beranda</a>
-                <a href="#" class="hover:underline">Tentang Kami</a>
-                <a href="#" class="hover:underline">Ibadah</a>
-                <a href="#" class="hover:underline">Berita</a>
-                <a href="#" class="hover:underline">Jemaat</a>
+                <a href="{{ url('/') }}" class="hover:underline">Beranda</a>
+                <a href="{{ url('/tentang-kami') }}" class="hover:underline">Tentang Kami</a>
+                <a href="{{ url('/ibadah') }}" class="hover:underline">Ibadah</a>
+                <a href="{{ url('/berita') }}" class="hover:underline">Berita</a>
+                <a href="{{ url('/jemaat') }}" class="hover:underline">Jemaat</a>
             </nav>
         </div>
         <div class="hidden lg:flex space-x-2">
-            <button class="bg-[#FFBB00] hover:bg-yellow-500 px-4 py-2 rounded text-sm">Login</button>
-            <button class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Daftar</button>
+            <a href="#" class="bg-[#FFBB00] hover:bg-yellow-500 px-4 py-2 rounded text-sm">Donasi</a>
+            <a href="{{ url('login') }}" class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Login</a>
         </div>
         <!-- Hamburger Button (visible on smaller screens) -->
         <button @click="isOpen = !isOpen" class="lg:hidden flex items-center px-4 py-2">
@@ -36,14 +36,15 @@
     <!-- Mobile Menu -->
     <div x-show="isOpen" class="lg:hidden">
         <nav class="flex flex-col items-start space-y-2 p-4">
-            <a href="#" class="hover:underline">Beranda</a>
-            <a href="#" class="hover:underline">Tentang Kami</a>
-            <a href="#" class="hover:underline">Ibadah</a>
-            <a href="#" class="hover:underline">Berita</a>
-            <a href="#" class="hover:underline">Jemaat</a>
+            <a href="{{ url('/') }}" class="hover:underline">Beranda</a>
+            <a href="{{ url('/tentang-kami') }}" class="hover:underline">Tentang Kami</a>
+            <a href="{{ url('/ibadah') }}" class="hover:underline">Ibadah</a>
+            <a href="{{ url('/berita') }}" class="hover:underline">Berita</a>
+            <a href="{{ url('/jemaat') }}" class="hover:underline">Jemaat</a>
             <div class="flex space-x-2 mt-4">
-                <button class="bg-[#FFBB00] hover:bg-yellow-500 px-4 py-2 rounded text-sm">Donasi</button>
-                <button class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Login</button>
+                <a href="#" class="bg-[#FFBB00] hover:bg-yellow-500 px-4 py-2 rounded text-sm">Donasi</a>
+                <a href="{{ route('login') }}"
+                    class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Login</a>
             </div>
         </nav>
     </div>
