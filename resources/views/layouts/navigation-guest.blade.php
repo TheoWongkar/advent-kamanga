@@ -2,8 +2,7 @@
     <div class="container mx-auto flex flex-wrap items-center justify-between p-4">
         <div class="flex items-center space-x-4">
             <div class="flex items-center text-white mr-3 leading-none">
-                <img src="https://w7.pngwing.com/pngs/600/819/png-transparent-seventh-day-adventist-church-christian-church-christianity-pastor-adventism-others-miscellaneous-christianity-leaf-thumbnail.png"
-                    alt="Logo" class="h-10 mr-4">
+                <img src="img/logo-advent.png" alt="Logo" class="h-10 mr-4">
                 <div>
                     <p class="text-md font-semibold tracking-wide">Gereja Masehi Advent</p>
                     <p class="text-md font-semibold tracking-wide">Hari Ketujuh di Indonesia</p>
@@ -21,7 +20,14 @@
         </div>
         <div class="hidden lg:flex space-x-2">
             <a href="#" class="bg-[#FFBB00] hover:bg-yellow-500 px-4 py-2 rounded text-sm">Donasi</a>
-            <a href="{{ url('login') }}" class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Login</a>
+            @auth
+                <form action="{{ route('logout') }}" method="POST">
+                    @csrf
+                    <button class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Logout</button>
+                </form>
+            @else
+                <a href="{{ url('login') }}" class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Login</a>
+            @endauth
         </div>
         <!-- Hamburger Button (visible on smaller screens) -->
         <button @click="isOpen = !isOpen" class="lg:hidden flex items-center px-4 py-2">
