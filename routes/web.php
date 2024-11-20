@@ -9,6 +9,11 @@ use App\Http\Controllers\WorshipController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/tentang-kami', function () {
+    return view('about');
+});
+
 Route::get('/berita', [PostController::class, 'index']);
 Route::get('/ibadah', [WorshipController::class, 'index']);
 Route::get('/jemaat', [CongregationController::class, 'index']);
