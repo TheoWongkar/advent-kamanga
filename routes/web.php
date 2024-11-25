@@ -19,6 +19,7 @@ Route::get('/berita', [PostController::class, 'index']);
 Route::get('/ibadah', [WorshipController::class, 'index']);
 Route::get('/jemaat', [CongregationController::class, 'index']);
 Route::get('/ajukan-ibadah', [WorshipRequestController::class, 'index']);
+Route::post('/ajukan-ibadah', [WorshipRequestController::class, 'store']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 

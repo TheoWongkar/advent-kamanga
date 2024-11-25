@@ -12,6 +12,7 @@ class Worship extends Model
 
     protected $fillable = [
         'user_id',
+        'name',
         'category',
         'preacher',
         'singer',

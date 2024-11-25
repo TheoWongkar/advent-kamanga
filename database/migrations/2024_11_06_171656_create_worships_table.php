@@ -13,9 +13,10 @@ return new class extends Migration
     {
         Schema::create('worships', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
+            $table->foreignId('user_id')->default(1)->constrained('users')->onDelete('cascade');
+            $table->string('name');
             $table->string('category');
-            $table->string('preacher')->default(null);
+            $table->string('preacher')->nullable();
             $table->string('singer')->nullable();
             $table->string('place');
             $table->string('status')->default('diproses');
