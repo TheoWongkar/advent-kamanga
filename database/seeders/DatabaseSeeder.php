@@ -26,21 +26,21 @@ class DatabaseSeeder extends Seeder
         ]);
         User::factory(2)->create();
 
-        Category::factory()->create([
-            'category' => 'Ibadah',
-            'color' => 'green',
-        ]);
-        Category::factory()->create([
-            'category' => 'Pelayanan',
-            'color' => 'blue',
-        ]);
-        Category::factory()->create([
-            'category' => 'Event',
-            'color' => 'red',
-        ]);
+        // Category::factory()->create([
+        //     'category' => 'Ibadah',
+        //     'color' => 'green',
+        // ]);
+        // Category::factory()->create([
+        //     'category' => 'Pelayanan',
+        //     'color' => 'blue',
+        // ]);
+        // Category::factory()->create([
+        //     'category' => 'Event',
+        //     'color' => 'red',
+        // ]);
 
-        Congregation::factory(6)->create();
-        Worship::factory(6)->create();
-        Post::factory(10)->create();
+        // Congregation::factory(6)->create();
+        // Worship::factory(6)->create();
+        // Post::factory(10)->create();
     }
 }

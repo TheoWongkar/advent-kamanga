@@ -11,10 +11,13 @@
                             <p class="text-4xl font-bold text-gray-800">
                                 {{ \Carbon\Carbon::parse($worship->date)->format('d') }}</p>
                             <p class="text-sm">{{ \Carbon\Carbon::parse($worship->date)->format('M Y') }}</p>
+                            <p class="text-red-600 text-md font-semibold">
+                                {{ \Carbon\Carbon::parse($worship->date)->format('h:i') }}
+                            </p>
                         </div>
                         <div>
                             <p class="text-lg font-semibold">IBADAH</p>
-                            <p class="text-lg font-semibold">{{ $worship->title }}</p>
+                            <p class="text-lg font-semibold">{{ $worship->category }}</p>
                         </div>
                     </div>
                     <div class="mt-4 text-sm">

@@ -12,14 +12,22 @@
                     <!-- Form Tambah Ibadah -->
                     <form action="{{ route('ibadah.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
-                        <!-- Judul Ibadah -->
+                        <!-- Kategori Ibadah -->
                         <div class="mb-4">
-                            <label for="title" class="block text-md font-medium text-gray-700">Judul Ibadah</label>
-                            <input type="text" name="title" id="title" required
+                            <label for="category" class="block text-md font-medium text-gray-700">Kategori
+                                Ibadah</label>
+                            <select id="category" name="category"
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border focus:border-[#141652]"
-                                placeholder="Masukkan judul ibadah" value="{{ old('title') }}">
-
-                            @error('title')
+                                required>
+                                <option value="{{ old('category') }}">
+                                    {{ old('category') ?: 'Pilih Kategori Ibadah' }}
+                                </option>
+                                <option value="Hari Minggu">Ibadah Hari Minggu</option>
+                                <option value="Ulang Tahun Kelahiran">Ulang Tahun Kelahiran</option>
+                                <option value="Ulang Tahun Pernikahan">Ulang Tahun Pernikahan</option>
+                                <option value="Kedukaan">Kedukaan</option>
+                            </select>
+                            @error('category')
                                 <p class="text-red-500 text-md mt-2">{{ $message }}</p>
                             @enderror
                         </div>
@@ -27,7 +35,7 @@
                         <!-- Pengkhotbah Ibadah -->
                         <div class="mb-4">
                             <label for="preacher" class="block text-md font-medium text-gray-700">Pengkhotbah</label>
-                            <input type="text" name="preacher" id="preacher" required
+                            <input type="text" name="preacher" id="preacher"
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border focus:border-[#141652]"
                                 placeholder="Masukkan pengkhotbah" value="{{ old('preacher') }}">
 
@@ -51,7 +59,7 @@
                         <!-- Tanggal Ibadah -->
                         <div class="mb-4">
                             <label for="date" class="block text-md font-medium text-gray-700">Tanggal Ibadah</label>
-                            <input type="date" name="date" id="date" required
+                            <input type="datetime-local" name="date" id="date" required
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border focus:border-[#141652]"
                                 placeholder="Masukkan pengkhotbah" value="{{ old('date') }}">
 

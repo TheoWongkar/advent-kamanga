@@ -67,14 +67,14 @@
                                         </th>
                                         <th
                                             class="text-left py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
-                                            JUDUL
+                                            Kategori Ibadah
                                         </th>
                                         <th
                                             class="text-center py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
                                             KHOTBAH
                                         </th>
                                         <th
-                                            class="text-left py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
+                                            class="text-center py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
                                             SINGER
                                         </th>
                                         <th
@@ -93,9 +93,9 @@
                                     @foreach ($worships as $worship)
                                         <tr class="border-t hover:bg-blue-100 transition duration-200">
                                             <td class="py-4 px-2 sm:px-4 text-center">{{ $loop->iteration }}</td>
-                                            <td class="py-4 px-2 sm:px-4">{{ $worship->title }}</td>
-                                            <td class="py-4 px-2 sm:px-4">{{ $worship->preacher }}</td>
-                                            <td class="py-4 px-2 sm:px-4">{{ $worship->singer }}</td>
+                                            <td class="py-4 px-2 sm:px-4">{{ $worship->category }}</td>
+                                            <td class="py-4 px-2 sm:px-4 text-center">{{ $worship->preacher }}</td>
+                                            <td class="py-4 px-2 sm:px-4 text-center">{{ $worship->singer }}</td>
                                             <td class="py-4 px-2 sm:px-4">{{ $worship->place }}</td>
                                             <td class="py-4 px-2 sm:px-4 text-center">
                                                 {{ \Carbon\Carbon::parse($worship->date)->format('d M Y') }}

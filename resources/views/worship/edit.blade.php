@@ -13,15 +13,22 @@
                     <form action="{{ route('ibadah.update', $worship->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
-                        <!-- Judul Ibadah -->
+                        <!-- Kategori Ibadah -->
                         <div class="mb-4">
-                            <label for="title" class="block text-md font-medium text-gray-700">Judul Ibadah</label>
-                            <input type="text" name="title" id="title" required
+                            <label for="category" class="block text-md font-medium text-gray-700">Kategori
+                                Ibadah</label>
+                            <select id="category" name="category"
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border focus:border-[#141652]"
-                                placeholder="Masukkan judul ibadah"
-                                value="{{ $worship->title = old('title') ?? $worship->title }}">
-
-                            @error('title')
+                                required>
+                                <option value="{{ old('category', $worship->category ?? '') }}">
+                                    {{ old('category', $worship->category ?? '') ?: 'Pilih Kategori Ibadah' }}
+                                </option>
+                                <option value="Hari Minggu">Ibadah Hari Minggu</option>
+                                <option value="Ulang Tahun Kelahiran">Ulang Tahun Kelahiran</option>
+                                <option value="Ulang Tahun Pernikahan">Ulang Tahun Pernikahan</option>
+                                <option value="Kedukaan">Kedukaan</option>
+                            </select>
+                            @error('category')
                                 <p class="text-red-500 text-md mt-2">{{ $message }}</p>
                             @enderror
                         </div>

@@ -44,9 +44,9 @@ class WorshipController extends Controller
     public function store(Request $request)
     {
         $validated = $request->validate([
-            'title' => 'required|string|min:5',
+            'category' => 'required|string',
             'preacher' => 'required|string',
-            'singer' => 'required|string',
+            'singer' => 'string',
             'place' => 'required|string',
             'date' => 'required',
         ]);
@@ -86,9 +86,9 @@ class WorshipController extends Controller
         $worship = Worship::where('id', $id)->firstOrFail();
 
         $validated = $request->validate([
-            'title' => 'required|string|min:5',
+            'category' => 'required|string|min:5',
             'preacher' => 'required|string',
-            'singer' => 'required|string',
+            'singer' => 'string',
             'place' => 'required|string',
             'date' => 'required',
         ]);

@@ -18,13 +18,13 @@
                         class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         placeholder="Masukkan alamat lengkap" required></textarea>
                 </div>
-                <!-- Kategori Pelayanan -->
+                <!-- Kategori Ibadah -->
                 <div class="mb-4">
-                    <label for="kategori" class="block text-gray-700 font-medium mb-2">Kategori Pelayanan</label>
-                    <select id="kategori" name="kategori"
+                    <label for="category" class="block text-gray-700 font-medium mb-2">Kategori Pelayanan</label>
+                    <select id="category" name="category"
                         class="w-full px-4 py-2 border rounded-lg focus:ring-2 focus:ring-blue-500 focus:outline-none"
                         required>
-                        <option value="" disabled selected>Pilih kategori pelayanan</option>
+                        <option value="" disabled selected>Pilih kategori Ibadah</option>
                         <option value="khusus">Pelayanan Khusus</option>
                         <option value="umum">Pelayanan Umum</option>
                         <option value="lainnya">Lainnya</option>

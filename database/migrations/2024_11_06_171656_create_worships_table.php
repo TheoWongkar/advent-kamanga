@@ -14,11 +14,12 @@ return new class extends Migration
         Schema::create('worships', function (Blueprint $table) {
             $table->id();
             $table->foreignId('user_id')->constrained('users')->onDelete('cascade');
-            $table->string('title');
-            $table->string('preacher');
-            $table->string('singer');
+            $table->string('category');
+            $table->string('preacher')->default(null);
+            $table->string('singer')->nullable();
             $table->string('place');
-            $table->date('date');
+            $table->string('status')->default('diproses');
+            $table->datetime('date');
             $table->timestamps();
         });
     }
