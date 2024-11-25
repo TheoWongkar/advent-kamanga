@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\WorshipController;
+use App\Http\Controllers\WorshipRequestController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index']);
@@ -17,6 +18,7 @@ Route::get('/tentang-kami', function () {
 Route::get('/berita', [PostController::class, 'index']);
 Route::get('/ibadah', [WorshipController::class, 'index']);
 Route::get('/jemaat', [CongregationController::class, 'index']);
+Route::get('/ajukan-ibadah', [WorshipRequestController::class, 'index']);
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->middleware(['auth', 'verified'])->name('dashboard');
 

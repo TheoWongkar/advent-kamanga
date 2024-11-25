@@ -3,29 +3,33 @@
     <!-- Hero Section -->
     <section class="relative bg-blue-900 text-white overflow-hidden">
         <div class="container mx-auto px-6 py-16 text-center relative z-10">
-            <h1 class="text-2xl font-bold">Selamat Datang di Gereja Advent</h1>
-            <p class="mt-4 text-xl">Temukan iman, kasih, dan kedamaian bersama kami.</p>
+            <h1 class="text-3xl md:text-5xl font-extrabold">Selamat Datang di Gereja Advent</h1>
+            <p class="mt-4 text-lg md:text-2xl">Temukan iman, kasih, dan kedamaian bersama kami.</p>
         </div>
-        <div class="absolute inset-0 bg-cover opacity-30"
-            style="background-image: url('https://source.unsplash.com/1600x900/?church');"></div>
+        <div class="absolute inset-0 bg-cover bg-center opacity-30"
+            style="background-image: url('img/gmahk-kamanga.png');"></div>
     </section>
 
     <!-- About Section -->
     <section class="container mx-auto px-6 py-16">
         <div class="flex flex-wrap items-center gap-10">
             <div class="w-full md:w-1/2">
-                <img src="https://source.unsplash.com/600x400/?church" alt="Gereja"
+                <img src="img/gmahk-kamanga.png" alt="Gereja Advent Kamanga"
                     class="rounded-lg shadow-lg transition-transform duration-500 hover:scale-105">
             </div>
             <div class="w-full md:w-1/2">
-                <h2 class="text-4xl font-bold text-blue-900 mb-4">Tentang Kami</h2>
-                <p class="text-gray-700 leading-relaxed">Kami adalah komunitas yang berfokus pada iman dan pelayanan
-                    kepada sesama. Melalui ajaran Yesus, kami bersama-sama mengejar tujuan hidup yang lebih bermakna dan
-                    harmonis.</p>
-                <p class="mt-4 text-gray-700 leading-relaxed">Setiap minggu, kami mengadakan kebaktian, kelas Alkitab,
-                    dan berbagai kegiatan sosial yang dapat memperkuat iman dan kebersamaan. Mari bersama-sama kita
-                    menjalin hubungan yang lebih dekat dengan Tuhan dan mempererat ikatan persaudaraan dalam komunitas.
-                </p>
+                <h2 class="text-4xl font-extrabold text-blue-900 mb-4">Tentang Kami</h2>
+                <p class="text-gray-700 leading-relaxed text-justify">Kami adalah komunitas yang berfokus pada iman dan
+                    pelayanan kepada sesama. Melalui ajaran Yesus, kami bersama-sama mengejar tujuan hidup yang lebih
+                    bermakna dan harmonis.</p>
+                <p class="mt-4 text-gray-700 leading-relaxed text-justify">Setiap minggu, kami mengadakan kebaktian,
+                    kelas Alkitab, dan berbagai kegiatan sosial yang dapat memperkuat iman dan kebersamaan. Mari
+                    bersama-sama kita menjalin hubungan yang lebih dekat dengan Tuhan dan mempererat ikatan
+                    persaudaraan dalam komunitas.</p>
+                <a href="#"
+                    class="inline-block mt-6 bg-blue-900 text-white px-6 py-2 rounded-lg shadow hover:bg-blue-800 transition duration-300">
+                    Pelajari Lebih Lanjut
+                </a>
             </div>
         </div>
     </section>
@@ -33,11 +37,11 @@
     <!-- Mission and Values Section -->
     <section class="bg-gray-100 py-16">
         <div class="container mx-auto px-6 text-center">
-            <h2 class="text-2xl font-bold">Misi dan Nilai Kami</h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-blue-900 mb-10">Misi dan Nilai Kami</h2>
             <div class="flex flex-wrap justify-center gap-8">
                 <!-- Card 1 -->
                 <div
-                    class="w-full md:w-1/3 bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transform transition-transform duration-300 hover:scale-105">
+                    class="w-full md:w-1/3 bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transform transition-transform duration-300 hover:scale-105">
                     <div class="flex justify-center mb-4">
                         <svg class="w-12 h-12 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -46,11 +50,12 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-semibold text-blue-900">Iman</h3>
-                    <p class="mt-2 text-gray-700">Kami memegang teguh Firman Tuhan sebagai panduan hidup yang benar.</p>
+                    <p class="mt-2 text-gray-700 leading-relaxed">Kami memegang teguh Firman Tuhan sebagai panduan hidup
+                        yang benar.</p>
                 </div>
                 <!-- Card 2 -->
                 <div
-                    class="w-full md:w-1/3 bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transform transition-transform duration-300 hover:scale-105">
+                    class="w-full md:w-1/3 bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transform transition-transform duration-300 hover:scale-105">
                     <div class="flex justify-center mb-4">
                         <svg class="w-12 h-12 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -59,11 +64,12 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-semibold text-blue-900">Kasih</h3>
-                    <p class="mt-2 text-gray-700">Mengasihi sesama seperti Yesus mengasihi kita semua.</p>
+                    <p class="mt-2 text-gray-700 leading-relaxed">Mengasihi sesama seperti Yesus mengasihi kita semua.
+                    </p>
                 </div>
                 <!-- Card 3 -->
                 <div
-                    class="w-full md:w-1/3 bg-white rounded-lg shadow-lg p-6 hover:shadow-xl transform transition-transform duration-300 hover:scale-105">
+                    class="w-full md:w-1/3 bg-white rounded-lg shadow-lg p-6 hover:shadow-2xl transform transition-transform duration-300 hover:scale-105">
                     <div class="flex justify-center mb-4">
                         <svg class="w-12 h-12 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
                             <path
@@ -72,7 +78,8 @@
                         </svg>
                     </div>
                     <h3 class="text-2xl font-semibold text-blue-900">Pelayanan</h3>
-                    <p class="mt-2 text-gray-700">Berusaha menjadi berkat bagi sesama melalui pelayanan.</p>
+                    <p class="mt-2 text-gray-700 leading-relaxed">Berusaha menjadi berkat bagi sesama melalui
+                        pelayanan.</p>
                 </div>
             </div>
         </div>

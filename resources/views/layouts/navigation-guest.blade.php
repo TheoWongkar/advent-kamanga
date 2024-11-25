@@ -19,14 +19,16 @@
             </nav>
         </div>
         <div class="hidden lg:flex space-x-2">
-            <a href="#" class="bg-[#FFBB00] hover:bg-yellow-500 px-4 py-2 rounded text-sm">Donasi</a>
+            <a href="{{ url('/ajukan-ibadah') }}"
+                class="bg-[#FFBB00] hover:bg-yellow-500 px-4 py-2 rounded text-sm">Ajukan
+                Ibadah</a>
             @auth
                 <form action="{{ route('logout') }}" method="POST">
                     @csrf
                     <button class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Logout</button>
                 </form>
             @else
-                <a href="{{ url('login') }}" class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Login</a>
+                <a href="{{ route('login') }}" class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Login</a>
             @endauth
         </div>
         <!-- Hamburger Button (visible on smaller screens) -->
@@ -48,7 +50,8 @@
             <a href="{{ url('/berita') }}" class="hover:underline">Berita</a>
             <a href="{{ url('/jemaat') }}" class="hover:underline">Jemaat</a>
             <div class="flex space-x-2 mt-4">
-                <a href="#" class="bg-[#FFBB00] hover:bg-yellow-500 px-4 py-2 rounded text-sm">Donasi</a>
+                <a href="{{ url('/ajukan-ibadah') }}"
+                    class="bg-[#FFBB00] hover:bg-yellow-500 px-4 py-2 rounded text-sm">Ajukan Ibadah</a>
                 <a href="{{ route('login') }}"
                     class="bg-[#FB6542] hover:bg-orange-600 px-4 py-2 rounded text-sm">Login</a>
             </div>

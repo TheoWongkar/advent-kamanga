@@ -2,7 +2,7 @@
 
     <!-- Hero Section -->
     <section class="relative bg-cover bg-center h-72 sm:h-96"
-        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQz3vdM11R_VTbM3HBPu0L9Q0ix1SG_RWEQ0Q&s');">
+        style="background-image: url('{{ asset('img/gmahk-kamanga.png') }}');">
         <div class="absolute inset-0 bg-blue-900 opacity-50"></div>
         <div class="container mx-auto relative z-10 text-center text-white py-10 sm:py-20">
             <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold">Gereja Masehi Advent Hari Ketujuh</h1>
@@ -27,13 +27,13 @@
             </div>
         </section>
 
-        <!-- Event Section with Image -->
-        <section class="flex items-center bg-[#375E97] text-white rounded-lg overflow-hidden shadow-lg">
-            <div class="w-1/2">
-                <img src="https://catholicstewardship.com/wp-content/uploads/2021/12/christmas-advent-wreath-for-website_orig-e1670267637705.jpg"
-                    alt="Gambar Deskripsi" class="w-full h-full object-cover">
+        <!-- Event Section -->
+        <section
+            class="flex flex-col md:flex-row items-center bg-[#375E97] text-white rounded-lg overflow-hidden shadow-lg">
+            <div class="w-full md:w-1/2">
+                <img src="img/lilin-ibadah.jpg" alt="Gambar Ibadah" class="w-full h-full object-cover">
             </div>
-            <div class="w-1/2 pl-6">
+            <div class="w-full md:w-1/2 p-6 md:pl-6 text-center md:text-left">
                 @if ($worship)
                     <h2 class="font-bold text-2xl mb-4">JADWAL IBADAH TERBARU</h2>
                     <h2 class="font-semibold text-xl mb-1">{{ $worship->title }}</h2>
