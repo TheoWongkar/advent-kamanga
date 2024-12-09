@@ -71,6 +71,14 @@
                                         </th>
                                         <th
                                             class="text-center py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
+                                            Status
+                                        </th>
+                                        <th
+                                            class="text-left py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
+                                            Nama Pemohon
+                                        </th>
+                                        <th
+                                            class="text-center py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
                                             KHOTBAH
                                         </th>
                                         <th
@@ -78,7 +86,7 @@
                                             SINGER
                                         </th>
                                         <th
-                                            class="text-left py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
+                                            class="text-center py-3 px-2 sm:px-4 uppercase font-semibold text-xs sm:text-sm">
                                             TEMPAT
                                         </th>
                                         <th
@@ -94,9 +102,16 @@
                                         <tr class="border-t hover:bg-blue-100 transition duration-200">
                                             <td class="py-4 px-2 sm:px-4 text-center">{{ $loop->iteration }}</td>
                                             <td class="py-4 px-2 sm:px-4">{{ $worship->category }}</td>
+                                            <td class="py-4 px-2 sm:px-4">
+                                                <span
+                                                    class="{{ $worship->status === 'Diarsipkan' ? 'bg-yellow-800 text-white' : 'bg-green-600 text-white' }} px-3 py-1 rounded-full text-sm font-medium">
+                                                    {{ $worship->status }}
+                                                </span>
+                                            </td>
+                                            <td class="py-4 px-2 sm:px-4">{{ $worship->name }}</td>
                                             <td class="py-4 px-2 sm:px-4 text-center">{{ $worship->preacher }}</td>
                                             <td class="py-4 px-2 sm:px-4 text-center">{{ $worship->singer }}</td>
-                                            <td class="py-4 px-2 sm:px-4">{{ $worship->place }}</td>
+                                            <td class="py-4 px-2 sm:px-4 text-center">{{ $worship->place }}</td>
                                             <td class="py-4 px-2 sm:px-4 text-center">
                                                 {{ \Carbon\Carbon::parse($worship->date)->format('d M Y') }}
                                             </td>

@@ -18,7 +18,7 @@ class DashboardController extends Controller
         $totalPosts = Post::count();
 
         $totalWorship = Worship::count();
-        $latestWorship = Worship::latest('title', 'date')->first();
+        $latestWorship = Worship::latest('name', 'date')->first();
 
         $totalCongregation = Congregation::count();
 

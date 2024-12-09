@@ -86,11 +86,13 @@ class WorshipController extends Controller
         $worship = Worship::where('id', $id)->firstOrFail();
 
         $validated = $request->validate([
+            'name' => 'required|string|min:3',
             'category' => 'required|string|min:5',
             'preacher' => 'required|string',
             'singer' => 'string',
             'place' => 'required|string',
             'date' => 'required',
+            'status' => 'required|string',
         ]);
 
         $worship->update($validated);

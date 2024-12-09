@@ -47,7 +47,7 @@
                         <!-- Singer Ibadah -->
                         <div class="mb-4">
                             <label for="singer" class="block text-md font-medium text-gray-700">Singer</label>
-                            <input type="text" name="singer" id="singer" required
+                            <input type="text" name="singer" id="singer"
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border focus:border-[#141652]"
                                 placeholder="Masukkan singer ibadah" value="{{ old('singer') }}">
 
@@ -76,6 +76,25 @@
                                 value="{{ old('place') }}"></textarea>
 
                             @error('place')
+                                <p class="text-red-500 text-md mt-2">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <!-- Status Ibadah -->
+                        <div class="mb-4">
+                            <label for="status" class="block text-md font-medium text-gray-700">Kategori
+                                Ibadah</label>
+                            <select id="status" name="status"
+                                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border focus:border-[#141652]"
+                                required>
+                                <option value="{{ old('status') }}">
+                                    {{ old('status') ?: 'Pilih Kategori Ibadah' }}
+                                </option>
+                                </option>
+                                <option value="Diarsipkan">Diarsipkan</option>
+                                <option value="Terbit">Terbit</option>
+                            </select>
+                            @error('status')
                                 <p class="text-red-500 text-md mt-2">{{ $message }}</p>
                             @enderror
                         </div>

@@ -13,6 +13,18 @@
                     <form action="{{ route('ibadah.update', $worship->id) }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
+                        <!-- Nama Pemohon -->
+                        <div class="mb-4">
+                            <label for="name" class="block text-md font-medium text-gray-700">Nama Pemohon</label>
+                            <input type="text" name="name" id="name" required
+                                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border focus:border-[#141652]"
+                                placeholder="Masukkan pengkhotbah"
+                                value="{{ $worship->name = old('name') ?? $worship->name }}">
+                            @error('name')
+                                <p class="text-red-500 text-md mt-2">{{ $message }}</p>
+                            @enderror
+                        </div>
+
                         <!-- Kategori Ibadah -->
                         <div class="mb-4">
                             <label for="category" class="block text-md font-medium text-gray-700">Kategori
@@ -49,7 +61,7 @@
                         <!-- Singer Ibadah -->
                         <div class="mb-4">
                             <label for="singer" class="block text-md font-medium text-gray-700">Singer</label>
-                            <input type="text" name="singer" id="singer" required
+                            <input type="text" name="singer" id="singer"
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border focus:border-[#141652]"
                                 placeholder="Masukkan singer ibadah"
                                 value="{{ $worship->singer = old('singer') ?? $worship->singer }}">
@@ -75,11 +87,29 @@
                         <!-- Tempat Ibadah -->
                         <div class="mb-4">
                             <label for="place" class="block text-md font-medium text-gray-700">Tempat Ibadah</label>
-                            <textarea name="place" id="place" cols="30" rows="5"
+                            <textarea name="place" id="place" cols="30" rows="5" required
                                 class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border focus:border-[#141652]"
                                 value="{{ old('place') }}">{{ $worship->place = old('place') ?? $worship->place }}</textarea>
 
                             @error('place')
+                                <p class="text-red-500 text-md mt-2">{{ $message }}</p>
+                            @enderror
+                        </div>
+
+                        <!-- Status Ibadah -->
+                        <div class="mb-4">
+                            <label for="status" class="block text-md font-medium text-gray-700">Kategori
+                                Ibadah</label>
+                            <select id="status" name="status"
+                                class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:border focus:border-[#141652]"
+                                required>
+                                <option value="{{ old('status', $worship->status ?? '') }}">
+                                    {{ old('status', $worship->status ?? '') ?: 'Status Ibadah' }}
+                                </option>
+                                <option value="Diarsipkan">Diarsipkan</option>
+                                <option value="Terbit">Terbit</option>
+                            </select>
+                            @error('status')
                                 <p class="text-red-500 text-md mt-2">{{ $message }}</p>
                             @enderror
                         </div>

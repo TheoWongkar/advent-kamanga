@@ -21,6 +21,7 @@
                         </div>
                     </div>
                     <div class="mt-4 text-sm">
+                        <p><strong>Rumah Keluarga: </strong><span class="text-gray-600">{{ $worship->name }}</span> </p>
                         <p><strong>Khotbah: </strong><span class="text-gray-600">{{ $worship->preacher }}</span> </p>
                         <p><strong>Singer: </strong><span class="text-gray-600">{{ $worship->singer }}</span> </p>
                         <p><strong>Tempat:</strong> <span class="text-gray-600">{{ $worship->place }}</span></p>
